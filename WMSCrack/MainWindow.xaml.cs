@@ -25,6 +25,7 @@ namespace WMSCrack
             "5N93e3d03291A9c5072fbcX5285PO316",
             "c9dGP9da1aXf7a9F79b3a0d50c5aM7c"
         };
+        private ZF2006Class myClass = new ZF2006Class();
         public MainWindow()
         {
             InitializeComponent();
@@ -80,6 +81,11 @@ namespace WMSCrack
             tb1_rs2.Text = array2[1];
             tb1_rs3.Text = array2[2];
             tb1_rs4.Text = array2[3];
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            tb_rspass.Text = myClass.md5Target(tb_pass.Text, "pw");
         }
     }
 }
